@@ -27,8 +27,8 @@ pipeline {
         }
          stage('clean-image') {
             steps {
-                sh '''docker rmi ramsahu360/easy-backend:latest
-                 docker rmi ramsahu360/easy-frontend:latest'''
+                sh '''docker rmi -f ramsahu360/easy-backend:latest
+                 docker rmi -f ramsahu360/easy-frontend:latest'''
             }
         }
           stage('apply') {
